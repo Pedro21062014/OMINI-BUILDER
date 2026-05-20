@@ -72,12 +72,12 @@ export function Header() {
   }
 
   return (
-    <header className="flex items-center h-[var(--header-height)] bg-bolt-elements-background-depth-1 border-b border-bolt-elements-borderColor select-none">
+    <header className="professional-header flex items-center h-[var(--header-height)] bg-bolt-elements-background-depth-1/95 border-b border-bolt-elements-borderColor/70 select-none backdrop-blur-xl">
       {/* LEFT: Logo */}
       <div className="flex items-center px-3 shrink-0">
         <a
           href="/"
-          className="flex items-center rounded-lg px-2 py-1.5 hover:bg-bolt-elements-item-backgroundActive transition-all"
+          className="flex items-center rounded-xl px-2.5 py-1.5 hover:bg-bolt-elements-item-backgroundActive/80 transition-all duration-200"
           title="Home"
         >
           <BrandAsset src="/omini-logo.html" title="Omini" className="h-10 w-[190px] max-w-full omni-logo-themed" />
@@ -85,7 +85,7 @@ export function Header() {
       </div>
 
       {/* Separator */}
-      <div className="w-px h-5 bg-bolt-elements-borderColor hidden sm:block" />
+      <div className="w-px h-5 bg-bolt-elements-borderColor/70 hidden sm:block" />
 
       {/* Model Picker */}
       <div>
@@ -93,7 +93,7 @@ export function Header() {
       </div>
 
       {/* Separator */}
-      <div className="w-px h-5 bg-bolt-elements-borderColor hidden sm:block" />
+      <div className="w-px h-5 bg-bolt-elements-borderColor/70 hidden sm:block" />
 
       {/* CENTER: Editable project name */}
       <div className="flex-1 hidden sm:flex items-center justify-center px-3 min-w-0">
@@ -101,7 +101,7 @@ export function Header() {
       </div>
 
       {/* RIGHT: Action buttons */}
-      <div className="flex items-center gap-0.5 sm:gap-1 px-1 sm:px-2 shrink-0 relative z-[50]">
+      <div className="flex items-center gap-1 sm:gap-1.5 px-2 sm:px-3 shrink-0 relative z-[50]">
         <ClientOnly>
           {() => (
             <>
@@ -126,14 +126,14 @@ export function Header() {
               <div ref={moreRef} className="relative">
                 <button
                   onClick={() => setMoreMenuOpen(!moreMenuOpen)}
-                  className="flex items-center justify-center w-8 h-8 rounded-lg text-bolt-elements-textSecondary hover:text-bolt-elements-textPrimary hover:bg-bolt-elements-item-backgroundActive transition-all"
+                  className="flex items-center justify-center w-8 h-8 rounded-xl text-bolt-elements-textSecondary hover:text-bolt-elements-textPrimary hover:bg-bolt-elements-item-backgroundActive/80 transition-all duration-200"
                   title="More"
                 >
                   <div className="i-ph:dots-three-vertical text-base" />
                 </button>
 
                 {moreMenuOpen && (
-                  <div className="absolute right-0 top-full mt-1 w-56 bg-bolt-elements-background-depth-2 border border-bolt-elements-borderColor rounded-xl shadow-2xl z-[100] overflow-hidden">
+                  <div className="absolute right-0 top-full mt-2 w-56 bg-bolt-elements-background-depth-2/95 border border-bolt-elements-borderColor/80 rounded-2xl shadow-2xl z-[100] overflow-hidden backdrop-blur-xl">
                     {/* Save options */}
                     {chat.started && (
                       <div className="p-1 border-b border-bolt-elements-borderColor">
@@ -278,7 +278,7 @@ function HomepageHeader({ onSearchOpen }: { onSearchOpen: () => void }) {
   }, [langOpen]);
 
   return (
-    <header className="flex items-center h-[var(--header-height)] bg-bolt-elements-background-depth-1 border-b border-bolt-elements-borderColor select-none">
+    <header className="professional-header flex items-center h-[var(--header-height)] bg-bolt-elements-background-depth-1/95 border-b border-bolt-elements-borderColor/70 select-none backdrop-blur-xl">
       {/* LEFT: spacing only */}
       <div className="w-0 sm:w-4 shrink-0" />
 

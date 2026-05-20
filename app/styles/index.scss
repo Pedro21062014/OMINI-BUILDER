@@ -244,3 +244,20 @@ body {
     font-size: 16px !important;
   }
 }
+
+/* ===== Professional UI polish ===== */
+.professional-header {
+  position: sticky;
+  top: 0;
+  z-index: 60;
+  box-shadow: 0 8px 24px -18px rgba(15, 23, 42, 0.35);
+}
+
+[data-theme="dark"] .professional-header {
+  box-shadow: 0 10px 30px -18px rgba(2, 6, 23, 0.75);
+  background-image: linear-gradient(180deg, rgba(30, 41, 59, 0.2), rgba(15, 23, 42, 0.05));
+}
+
+[data-theme="light"] .professional-header {
+  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.95), rgba(248, 250, 252, 0.92));
+}
